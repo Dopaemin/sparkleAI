@@ -9,12 +9,10 @@ const UserSchema = new Schema({
   email: {
     type: String,
     required: true,
-    unique: true,
   },
   username: {
     type: String,
     required: true,
-    unique: true,
   },
   photo: {
     type: String,
@@ -25,14 +23,6 @@ const UserSchema = new Schema({
   },
   lastName: {
     type: String,
-  },
-  planId: {
-    type: Number,
-    default: 1,
-  },
-  creditBalance: {
-    type: Number,
-    default: 10,
   },
 });
 
