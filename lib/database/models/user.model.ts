@@ -36,23 +36,6 @@ const UserSchema = new Schema({
   },
 });
 
-const user: {
-  clerkId: string;
-  email: string;
-  username: string;
-  firstName: string | null;
-  lastName: string | null;
-  photo: string;
-} = {
-  clerkId: 'some-id',
-  email: 'email@example.com',
-  username: 'username',
-  firstName: null, // or some value
-  lastName: null, // or some value
-  photo: 'photo-url',
-};
-
-
 const User = models?.User || model("User", UserSchema);
 
 export default User;
