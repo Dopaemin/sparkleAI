@@ -1,13 +1,13 @@
-import mongoose, { Mongoose } from 'mongoose';
+import mongoose, { Mongoose } from "mongoose";
 
-const MONGODB_URL = process.env.MONGODB_URL;
+const MONGODB_URL = process.env.MONGODB_URL!;
 
-interface MongooseConnection {
+interface MongooseConn {
   conn: Mongoose | null;
   promise: Promise<Mongoose> | null;
 }
 
-let cached: MongooseConnection = (global as any).mongoose;
+let cached: MongooseConn = (global as any).mongoose;
 
 if (!cached) {
   cached = (global as any).mongoose = {
@@ -16,15 +16,16 @@ if (!cached) {
   };
 }
 
-export const connectToDatabase = async () => {
+export const connect = async () => {
   if (cached.conn) return cached.conn;
 
-  if (!MONGODB_URL) throw new Error('Missing MONGODB_URL');
-
-  cached.promise = mongoose.connect(MONGODB_URL, {
-    dbName: 'Sparkleai',
-    bufferCommands: false,
-  });
+  cached.promise =
+    cached.promise ||
+    mongoose.connect(MONGODB_URL, {
+      dbName: "Sparkle-db",
+      bufferCommands: false,
+      connectTimeoutMS: 30000,
+    });
 
   cached.conn = await cached.promise;
 
