@@ -1,9 +1,10 @@
-import React from 'react'
+// app/profile/page.tsx
+import React from 'react';
 
-export const ProfilePage = () => {
+const ProfilePage = () => {
   return (
     <div>ProfilePage</div>
-  )
-}
+  );
+};
 
-export default ProfilePage
+export default ProfilePage;

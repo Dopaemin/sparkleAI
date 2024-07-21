@@ -1,9 +1,10 @@
-import React from 'react'
+// app/transformations/add/page.tsx
+import React from 'react';
 
-export const AddTransformationPage = () => {
+const AddTransformationPage = () => {
   return (
     <div>AddTransformationPage</div>
-  )
-}
+  );
+};
 
-export default AddTransformationPage
+export default AddTransformationPage;

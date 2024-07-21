@@ -1,11 +1,8 @@
-import exp from 'constants'
-import React from 'react'
-import {
-    SignUp
-  } from "@clerk/nextjs";
+import React from 'react';
+import { SignUp } from "@clerk/nextjs";
 
-export const SignUpPage = () => {
-  return <SignUp />
-}
+const SignUpPage = () => {
+  return <SignUp />;
+};
 
-export default SignUpPage
+export default SignUpPage;

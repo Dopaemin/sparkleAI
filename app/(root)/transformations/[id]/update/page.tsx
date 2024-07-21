@@ -1,9 +1,10 @@
-import React from 'react'
+// app/transformations/update/page.tsx
+import React from 'react';
 
-export const UpdateTransformationPage = () => {
+const UpdateTransformationPage = () => {
   return (
     <div>UpdateTransformationPage</div>
-  )
-}
+  );
+};
 
-export default UpdateTransformationPage
+export default UpdateTransformationPage;

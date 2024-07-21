@@ -1,15 +1,11 @@
-import exp from 'constants'
-import React from 'react'
-import {
-  UserButton,
-} from "@clerk/nextjs";
+import React from 'react';
 
-export const Home = () => {
+const Home = () => {
   return (
     <div>
       <p>Home</p>
-      </div>
-  )
-}
+    </div>
+  );
+};
 
-export default Home
+export default Home;
